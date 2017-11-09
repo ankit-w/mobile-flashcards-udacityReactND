@@ -3,7 +3,7 @@ import { Notifications, Permissions } from 'expo';
 
 const NOTIFICATION_KEY = 'mobile-flashcards:notification';
 
-function buildNotification() {
+function build() {
     return {
         title: 'React Flashcards',
         body: "Reminder to start practicing!",
@@ -28,7 +28,7 @@ export function setNotification() {
                             today.setDate(today.getDate());
                             today.setHours(23, 0, 0);
 
-                            const notification = buildNotification();
+                            const notification = build();
 
                             Notifications.scheduleLocalNotificationAsync(notification, {
                                 time: today,

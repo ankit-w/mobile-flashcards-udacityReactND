@@ -5,13 +5,14 @@ import {Provider} from 'react-redux';
 import {StackNavigator, TabNavigator, ActivityIndicator} from 'react-navigation';
 
 import reducer from '../reducers/index.js';
-import {setNotification} from '../util/NotificationAPI';
 import AddDeck from './deck/AddDeck';
 import DeckList from './deck/DeckList';
 import Deck from './deck/Deck';
 import AddQuestion from './AddQuestion';
 import Quiz from './Quiz'
 import { Constants } from 'expo'
+import {setNotification} from '../util/NotificationModule';
+
 
 function UdaciStatusBar ({backgroundColor, ...props}) {
   return (
